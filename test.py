@@ -1,4 +1,14 @@
 import pyupbit
+import requests
+
+url = "https://api.upbit.com/v1/market/all?isDetails=false"
+
+headers = {"accept": "application/json"}
+response = requests.get(url, headers=headers)
+
+print(response.text)
+
+
 
 #API 키 발급받고 로그인
 access = "UZh8xdcnBtSpCb4iTdbx1nnFI9JEQWL2q0bZvGnr"
